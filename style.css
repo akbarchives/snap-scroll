@@ -1,0 +1,252 @@
+* {
+  scroll-behavior: smooth;
+  max-width: 1920px;
+  /* transition: scroll-behavior 3s ease-in; */
+}
+
+html {
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  padding: 0;
+  /* this is the most important */
+  margin: 0 auto;
+  overflow: hidden;
+}
+/* Navigation */
+nav {
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  padding-right: 100px;
+}
+nav ul {
+  width: 100%;
+  max-width: 1366px;
+  display: flex;
+  /* justify-content: space-evenly; */
+  justify-content: flex-start;
+  list-style: none;
+  /* width: 100vw; */
+  margin-left: -10px;
+}
+nav ul li {
+  width: 25%;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 26px;
+  font-weight: 500;
+  text-transform: capitalize;
+  padding: 5px;
+}
+
+nav ul li a:hover {
+  background: #00000034;
+}
+
+.active {
+  text-decoration: line-through 4px;
+}
+/* .container, */
+.page {
+  height: 100vh;
+  font-size: 60px;
+}
+
+.container {
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.page {
+  scroll-snap-align: start;
+  color: white;
+}
+
+.page:nth-of-type(2) {
+  /* background: #ffd4d4; */
+}
+.page:nth-of-type(3) {
+  /* background: #bface0; */
+  background: #d8b48b;
+}
+
+.page:nth-of-type(4) {
+  background: #6d8b74;
+}
+
+.home {
+  background: #9caf88;
+  background-size: cover;
+  height: calc(100vh - 40px);
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 25px;
+}
+
+.home div {
+  flex: 1.5;
+}
+.home div h1 {
+  font-weight: 500;
+  font-size: 1.5em;
+  color: black;
+  line-height: 20px;
+  letter-spacing: -10px;
+}
+.home h1:nth-child(3) {
+  margin-left: 100px;
+}
+
+.home p {
+  font-weight: 500;
+  font-size: 18px;
+  align-self: flex-end;
+  text-align: right;
+  color: black;
+  padding-bottom: 75px;
+  height: 140px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1.5;
+}
+
+.home p span {
+  background: white;
+}
+
+.home img {
+  aspect-ratio: auto;
+  width: 500px;
+  padding-left: 50px;
+  flex: 2.5;
+}
+
+.interior {
+  background: #ffd4d4;
+  background-image: url('img/nine-koepfer-OZiflZqq0N0-unsplash.jpg');
+  background-size: cover;
+  height: calc(100vh - 40px);
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 25px;
+  gap: 0px;
+
+  color: #000;
+}
+
+.interior div {
+  width: 25%;
+  height: 100%;
+}
+
+.interior div img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  /* height: auto; */
+}
+.interior div h1 {
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 10px;
+  margin-bottom: 60px;
+}
+
+.interior div p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.livingroom h1 {
+  font-weight: 500px;
+  font-size: 150px;
+  line-height: 0px;
+  margin: 0;
+  position: relative;
+  top: 75px;
+  left: 30px;
+  /* transform: rotate(5deg); */
+  transform-origin: 0% 0%;
+  z-index: 99;
+}
+
+.livingroom .container {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  margin: 0 100px;
+  padding-top: 100px;
+}
+
+.card {
+  flex: 1;
+  overflow: hidden;
+  transition: all 0.5s ease-in;
+  font-size: 0px;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.card:nth-child(1) {
+  flex: 3;
+}
+
+.card img {
+  object-fit: cover;
+  filter: grayscale(2);
+  max-width: 600px;
+  max-height: 400px;
+  min-width: 600px;
+  min-height: 400px;
+}
+
+.card a {
+  text-decoration: none;
+}
+
+.card p {
+  display: block;
+  position: relative;
+  text-decoration: bold;
+  z-index: 100;
+  color: white;
+  text-align: center;
+  bottom: 50%;
+  left: 0%;
+
+  font-family: 'Heebo', sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.card:hover {
+  flex: 3;
+  transition: all 0.5s ease-in;
+  font-size: 0px;
+}
+
+.card img:hover {
+  filter: none;
+
+  transition: all 1s ease-in-out;
+}
